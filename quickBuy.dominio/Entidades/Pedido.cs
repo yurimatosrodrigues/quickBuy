@@ -1,6 +1,7 @@
 ﻿using quickBuy.dominio.ObjetoDeValor;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 
@@ -17,8 +18,8 @@ namespace quickBuy.dominio.Entidades
         public string Cidade { get; set; }
         public string EnderecoCompleto { get; set; }
         public int NumeroEndereco { get; set; }
-        public int FormaPagamento { get; set; }
-        public FormaPagamento FormaPagamnto { get; set; }
+        public int FormaPagamentoId { get; set; }
+        public FormaPagamento FormaPagamento { get; set; }
 
         /*
           Pedido deve ter pelo menos um item de pedido ou muitos itens de pedidos.
@@ -29,14 +30,12 @@ namespace quickBuy.dominio.Entidades
         {
             LimparMensagensValidacao();
 
-            if (!ItemPedido.Any()) {
-                AdicionarCritica("Crítica: Pedido não pode ficar sem Item de Pedido.");
-            }
-            if (string.IsNullOrEmpty(CEP)) {
-                AdicionarCritica("Crítica: CEP deve estar preenchido.");
-                
-            }
-                
+            if(!ItensPedido.Any()) 
+                AdicionarCritica("Crítica: Pedido não pode ficar sem Item de Pedido.");            
+            if(string.IsNullOrEmpty(CEP)) 
+                AdicionarCritica("Crítica: CEP deve estar preenchido.");                
+            if(FormaPagamentoId == 0)
+                AdicionarCritica("Crítica: Forma de pagamento não informada.");
         }
     }
 }
