@@ -22,7 +22,7 @@ namespace quickBuy.web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("MySqlConnection");
+            var connectionString = Configuration.GetConnectionString("QuickBuyDB");
             services.AddDbContext<QuickBuyContexto>(option => 
                                                         option.UseMySql(connectionString,
                                                                         mbox => mbox.MigrationsAssembly("quickBuy.repositorio")));
