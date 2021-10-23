@@ -21,8 +21,7 @@ namespace quickBuy.repositorio.Config
             builder
                 .Property(u => u.Nome)
                 .IsRequired()
-                .HasMaxLength(50)
-                .HasColumnType("nvarchar");
+                .HasMaxLength(50);            
 
             builder.Property(u => u.Senha)
                 .IsRequired()
@@ -36,8 +35,6 @@ namespace quickBuy.repositorio.Config
             builder
                 .HasMany(u => u.Pedidos)
                 .WithOne(p => p.Usuario);
-
-
         }
     }
 }
