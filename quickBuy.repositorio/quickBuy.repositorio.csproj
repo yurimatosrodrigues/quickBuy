@@ -17,8 +17,4 @@
     <ProjectReference Include="..\quickBuy.dominio\quickBuy.dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Config\" />
-  </ItemGroup>
-
 </Project>
