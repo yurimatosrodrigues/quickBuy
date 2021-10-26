@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using quickBuy.dominio.Contratos;
 using quickBuy.repositorio.Contexto;
+using quickBuy.repositorio.Repositorios;
 
 namespace quickBuy.web
 {
@@ -27,6 +29,9 @@ namespace quickBuy.web
                                                         option.UseLazyLoadingProxies()
                                                         .UseMySql(connectionString,
                                                                         mbox => mbox.MigrationsAssembly("quickBuy.repositorio")));
+
+            services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
