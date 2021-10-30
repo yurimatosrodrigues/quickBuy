@@ -1,8 +1,0 @@
-C:\repos\quickBuy\quickBuy.dominio\bin\Debug\netstandard2.0\quickBuy.dominio.deps.json
-C:\repos\quickBuy\quickBuy.dominio\bin\Debug\netstandard2.0\quickBuy.dominio.dll
-C:\repos\quickBuy\quickBuy.dominio\bin\Debug\netstandard2.0\quickBuy.dominio.pdb
-C:\repos\quickBuy\quickBuy.dominio\obj\Debug\netstandard2.0\quickBuy.dominio.AssemblyInfoInputs.cache
-C:\repos\quickBuy\quickBuy.dominio\obj\Debug\netstandard2.0\quickBuy.dominio.AssemblyInfo.cs
-C:\repos\quickBuy\quickBuy.dominio\obj\Debug\netstandard2.0\quickBuy.dominio.csproj.CoreCompileInputs.cache
-C:\repos\quickBuy\quickBuy.dominio\obj\Debug\netstandard2.0\quickBuy.dominio.dll
-C:\repos\quickBuy\quickBuy.dominio\obj\Debug\netstandard2.0\quickBuy.dominio.pdb
