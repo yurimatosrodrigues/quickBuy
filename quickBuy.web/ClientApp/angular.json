@@ -13,8 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "progress": false,
-            "extractCss": true,
+            "progress": false,            
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
