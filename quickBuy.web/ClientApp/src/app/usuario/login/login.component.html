@@ -1,14 +1,17 @@
 <div class="text-center">
+
   <form class="form-signin">
+    <img src=".\assets\corinthians.png" title="Vai Corinthians" />
+
     <h1 class="h4 mb-3 login">Login</h1>
     <label for="inputEmail" class="sr-only">E-mail</label>
 
-    <input type="email" id="inputEmail" name="email" placeholder="Informe o seu e-mail" class="form-control mb-3" />
+    <input type="email" id="inputEmail" name="email" placeholder="Informe o seu e-mail"
+           class="form-control mb-3" [(ngModel)]="email"/>
     <label for="inputSenha" class="sr-only"></label>
     <input type="password" id="inputSenha" name="senha" placeholder="Senha" class="form-control mb-3" />
 
-    <button class="btn btn-primary btn-block mb-3" type="submit">Entrar</button>
+    <button class="btn btn-primary btn-block mb-3" type="submit" (click)="entrar()">Entrar</button>
 
   </form>
-
 </div>

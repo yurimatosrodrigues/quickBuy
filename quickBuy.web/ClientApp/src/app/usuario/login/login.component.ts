@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent {
-
+  public email = "yuimatos.tuti@gmail.com";
+  
+  entrar() {
+    alert(this.email);
+  }
+  
 }
