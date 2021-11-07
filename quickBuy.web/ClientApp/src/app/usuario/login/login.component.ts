@@ -21,13 +21,15 @@ export class LoginComponent implements OnInit{
     this.usuario = new Usuario();
   }
 
-  entrar() {
+  entrar() {    
     this.usuarioServico.verificarUsuario(this.usuario)
       .subscribe(
         data => {
+          console.log(data);
         },
         err => {
+          console.log(err.error);
         }      
-    );   
+    );    
   }  
 }
