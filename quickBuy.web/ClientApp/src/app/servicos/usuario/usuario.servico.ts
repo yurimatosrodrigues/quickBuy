@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { Usuario } from "../../modelo/usuario";
 
 @Injectable({
-
+  providedIn: "root"
 })
 export class UsuarioServico {
   private baseURL: string;
@@ -18,9 +18,8 @@ export class UsuarioServico {
       email: usuario.email,
       senha: usuario.senha
     }
-    return this.http.post();
 
-
-    //this.http.get();
+    //this.baseURL = Raíz do site que pode ser, por exemplo: http://quickbuy.com/
+    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
   }
 }
