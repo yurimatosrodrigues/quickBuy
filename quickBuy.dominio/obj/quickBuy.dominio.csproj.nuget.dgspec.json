@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj": {}
+    "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj": {}
   },
   "projects": {
-    "C:\\repos\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj": {
+    "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj",
+        "projectUniqueName": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj",
         "projectName": "quickBuy.dominio",
-        "projectPath": "C:\\repos\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj",
+        "projectPath": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj",
         "packagesPath": "C:\\Users\\Phibra\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\quickBuy\\quickBuy.dominio\\obj\\",
+        "outputPath": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Phibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

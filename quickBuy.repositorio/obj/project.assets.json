@@ -4226,11 +4226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\quickBuy\\quickBuy.repositorio\\quickBuy.repositorio.csproj",
+      "projectUniqueName": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.repositorio\\quickBuy.repositorio.csproj",
       "projectName": "quickBuy.repositorio",
-      "projectPath": "C:\\repos\\quickBuy\\quickBuy.repositorio\\quickBuy.repositorio.csproj",
+      "projectPath": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.repositorio\\quickBuy.repositorio.csproj",
       "packagesPath": "C:\\Users\\Phibra\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\quickBuy\\quickBuy.repositorio\\obj\\",
+      "outputPath": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.repositorio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Phibra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4247,8 +4247,8 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
-            "C:\\repos\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj": {
-              "projectPath": "C:\\repos\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj"
+            "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj": {
+              "projectPath": "C:\\repos\\quickbuy\\quickBuy\\quickBuy.dominio\\quickBuy.dominio.csproj"
             }
           }
         }
@@ -4303,7 +4303,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.414\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.416\\RuntimeIdentifierGraph.json"
       }
     }
   }
