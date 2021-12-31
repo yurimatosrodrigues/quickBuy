@@ -3,6 +3,7 @@ using quickBuy.dominio.Entidades;
 using quickBuy.repositorio.Contexto;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace quickBuy.repositorio.Repositorios
@@ -11,6 +12,11 @@ namespace quickBuy.repositorio.Repositorios
     {
         public UsuarioRepositorio(QuickBuyContexto quickBuyContexto) : base(quickBuyContexto)
         {
+        }
+
+        public Usuario Obter(string email, string senha)
+        {
+            return QuickBuyContexto.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
         }
     }
 }

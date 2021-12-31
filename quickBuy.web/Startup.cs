@@ -31,6 +31,7 @@ namespace quickBuy.web
                                                                         mbox => mbox.MigrationsAssembly("quickBuy.repositorio")));
 
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
