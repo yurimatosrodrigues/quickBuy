@@ -53,6 +53,9 @@
       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativa_spinner"> </span>      
       Entrar
     </button>
+    <div>
+      <a [routerLink]='["/novo-usuario"]'>Cadastre-se</a>
+    </div>
 
     <div class="alert alert-danger" *ngIf="mensagem">
       {{ mensagem }}

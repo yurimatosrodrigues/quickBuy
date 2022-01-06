@@ -1,10 +1,83 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+<div class="text-center">
 
-</body>
-</html>
+  <form class="form-signin">
+    <img src=".\assets\corinthians.png" title="Vai Corinthians" />
+
+    <h1 class="h4 mb-3 login">Criar conta</h1>
+
+    <label for="inputEmail" class="sr-only">E-mail</label>
+    <input type="email"
+           id="inputEmail"
+           name="email"
+           placeholder="Informe o seu e-mail"
+           class="form-control mb-3"
+           [ngClass]="{
+            'is-invalid': email.invalid && (email.dirty || email.touched),
+            'is-valid': email.valid
+           }"
+           [(ngModel)]="usuario.email"
+           #email="ngModel"
+           email
+           required />
+
+    <div class="invalid-feedback mb-3" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required">
+        E-mail não preenchido.
+      </div>
+      <div *ngIf="email.errors.email">
+        E-mail não está no formato correto.
+      </div>
+    </div>
+
+    <label for="inputSenha" class="sr-only"></label>
+
+    <input type="password"
+           id="inputSenha"
+           name="senha"
+           placeholder="Senha"
+           class="form-control mb-3"
+           [ngClass]="{
+            'is-invalid': senha.invalid && (senha.dirty || senha.touched),
+           'is-valid': senha.valid
+           }"
+           [(ngModel)]="usuario.senha"
+           #senha="ngModel"
+           required />
+    <div class="invalid-feedback mb-3" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+      <div *ngIf="senha.errors.required">
+        Senha deve ser informada.
+      </div>
+    </div>
+
+
+    <label for="inputNome" class="sr-only">Nome</label>
+    <input type="text" id="inputNome"
+           name="nome"
+           placeholder="Informe o nome"
+           class="form-control mb-3"
+           [ngClass]="{
+            'is-invalid': nome.invalid && (nome.dirty || email.touched),
+            'is-valid': nome.valid
+           }"
+           [(ngModel)]="usuario.nome"
+           #nome="ngModel"           
+           required />
+
+    <div class="invalid-feedback mb-3" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+      <div *ngIf="nome.errors.required">
+        Nome não preenchido.
+      </div>      
+    </div>
+
+
+
+    <button class="btn btn-primary btn-block mb-3" type="submit">
+      Salvar
+    </button>
+    <div>
+      <a [routerLink]='["/novo-usuario"]'>Cadastre-se</a>
+    </div>
+
+
+  </form>
+</div>
