@@ -60,24 +60,44 @@
             'is-valid': nome.valid
            }"
            [(ngModel)]="usuario.nome"
-           #nome="ngModel"           
+           #nome="ngModel"
            required />
 
     <div class="invalid-feedback mb-3" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
       <div *ngIf="nome.errors.required">
         Nome não preenchido.
-      </div>      
+      </div>
     </div>
 
 
 
-    <button class="btn btn-primary btn-block mb-3" type="submit">
-      Salvar
+    <label for="inputSobreNome" class="sr-only">Sobrenome</label>
+    <input type="text" id="inputSobreNome"
+           name="sobreNome"
+           placeholder="Informe o sobrenome"
+           class="form-control mb-3"
+           [ngClass]="{
+            'is-invalid': sobreNome.invalid && (sobreNome.dirty || sobreNome.touched),
+            'is-valid': sobreNome.valid
+           }"
+           [(ngModel)]="usuario.sobreNome"
+           #sobreNome="ngModel"
+           required />
+
+    <div class="invalid-feedback mb-3" *ngIf="sobreNome.invalid && (sobreNome.dirty || sobreNome.touched)">
+      <div *ngIf="sobreNome.errors.required">
+        Sobrenome não preenchido.
+      </div>
+    </div>
+
+
+
+    <button class="btn btn-primary btn-block mb-3" type="submit" (click)="cadastrar()" >      
+      Cadastrar
     </button>
-    <div>
-      <a [routerLink]='["/novo-usuario"]'>Cadastre-se</a>
-    </div>
+    <a [routerLink]='["/entrar"]'>Voltar</a>
 
 
+    
   </form>
 </div>
