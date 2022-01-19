@@ -91,13 +91,20 @@
     </div>
 
 
-
-    <button class="btn btn-primary btn-block mb-3" type="submit" (click)="cadastrar()" >      
+    <button class="btn btn-primary btn-block mb-3" type="submit" (click)="cadastrar()" [disabled]="ativar_spinner">
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativar_spinner"></span>
       Cadastrar
     </button>
+
     <a [routerLink]='["/entrar"]'>Voltar</a>
 
+    <div class="alert alert-danger" *ngIf="mensagem">
+      {{mensagem}}
+    </div>
 
+    <div class="alert alert-success" *ngIf="usuarioCadastrado">
+      Usuário cadastrado com sucesso! <a class="alert-link" [routerLink]='["/entrar"]'> Clique aqui</a> para entrar no sistema com sua conta.
+    </div>
     
   </form>
 </div>
