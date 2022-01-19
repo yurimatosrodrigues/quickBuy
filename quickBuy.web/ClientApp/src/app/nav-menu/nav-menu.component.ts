@@ -10,6 +10,10 @@ import { UsuarioServico } from '../servicos/usuario/usuario.servico';
 export class NavMenuComponent {
   isExpanded = false;
 
+  get usuario() {
+    return this.usuarioServico.usuario;
+  }
+
   constructor(private router: Router, private usuarioServico: UsuarioServico){
 
   }
