@@ -58,4 +58,8 @@
     </div>
 </div>
 
-<button class="btn btn-primary"> Cadastrar </button>
+<button class="btn btn-primary" (click)="cadastrar()" [disabled]="ativar_spinner">
+  <span class="spinner-border spinner-border-sm" *ngIf="ativar_spinner"></span>
+  Cadastrar
+</button>
+
