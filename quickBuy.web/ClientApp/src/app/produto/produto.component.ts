@@ -29,8 +29,7 @@ export class ProdutoComponent implements OnInit{
     this.produtoServico.enviarArquivo(this.arquivoSelecionado)
       .subscribe(
         nomeArquivo => {
-          this.produto.nomeArquivo = nomeArquivo;
-          alert(this.produto.nomeArquivo);
+          this.produto.nomeArquivo = nomeArquivo;          
           this.ativar_spinner = false;
         },
         e => {
@@ -40,18 +39,29 @@ export class ProdutoComponent implements OnInit{
       );
   }
 
-  public cadastrar() {    
+  public cadastrar() {
+    this.ativarEspera();
     this.produtoServico.cadastrar(this.produto)
       .subscribe(
         produtoJson => {
           console.log(produtoJson);
-
+          this.mensagem = "";
+          this.desativarEspera();
         },
         e => {
           console.log(e.error);
           this.mensagem = e.error;
+          this.desativarEspera();
         }
       );
+  }
+
+  public ativarEspera() {
+    this.ativar_spinner = true;
+  }
+
+  public desativarEspera() {
+    this.ativar_spinner = false;
   }
 
 }
