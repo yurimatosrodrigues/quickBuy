@@ -40,10 +40,17 @@ namespace quickBuy.web.Controllers
             }
         }
 
+
+
         [HttpPost]
         public IActionResult Post([FromBody]Produto produto) {
             try
-            {                
+            {
+                produto.Validate();
+                if (!produto.EValido) {
+                    return BadRequest(produto.ObterMensagensValidacao());
+                }
+
                 _produtoRepositorio.Adicionar(produto);
                 return Created("api/produto", produto);
             }

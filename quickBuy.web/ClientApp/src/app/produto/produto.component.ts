@@ -48,7 +48,8 @@ export class ProdutoComponent implements OnInit{
 
         },
         e => {
-          console.log(e.error)
+          console.log(e.error);
+          this.mensagem = e.error;
         }
       );
   }

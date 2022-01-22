@@ -23,9 +23,13 @@ namespace quickBuy.dominio.Entidades
             mensagemValidacao.Clear();
         }
 
+        public string ObterMensagensValidacao() {
+            return string.Join(". ", mensagemValidacao);
+        }
+
         //Abstract obriga a implementação nas classes filhas.
         public abstract void Validate();
-        protected bool EValido {
+        public bool EValido {
             get {
                 return !mensagemValidacao.Any();
             }
