@@ -36,7 +36,7 @@ export class ProdutoServico implements OnInit {
   }
 
   public obterTodosProdutos(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(this._baseUrl + "api/produto/");
+    return this.http.get<Produto[]>(this._baseUrl + "api/produto");
   }
 
   public obterProduto(produtoId: number): Observable<Produto> {

@@ -29,10 +29,7 @@ namespace quickBuy.web.Controllers
         public IActionResult Get() {
             try
             {
-                return Ok(_produtoRepositorio.ObterTodos());
-                /*if (!condicao) {
-                    return BadRequest("");
-                }*/
+                return Json(_produtoRepositorio.ObterTodos());               
             }
             catch (Exception ex)
             {
