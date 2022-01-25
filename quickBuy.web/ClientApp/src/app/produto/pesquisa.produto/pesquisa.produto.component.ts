@@ -25,4 +25,7 @@ export class PesquisaProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public adicionarProduto() {
+  }
+
 }
