@@ -14,8 +14,7 @@ export class PesquisaProdutoComponent implements OnInit {
     this.produtoServico.obterTodosProdutos()
       .subscribe(
         produtos => {
-          this.produtos = produtos;
-          alert(produtos[0].nome);
+          this.produtos = produtos;          
         },
         e => {
           console.log(e.error);
