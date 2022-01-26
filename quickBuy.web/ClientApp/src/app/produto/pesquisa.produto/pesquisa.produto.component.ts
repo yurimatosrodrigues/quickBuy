@@ -27,6 +27,27 @@ export class PesquisaProdutoComponent implements OnInit {
   }
 
   public adicionarProduto() {
+    sessionStorage.setItem('produtoSession', '');
+    this.router.navigate(['/produto']);
+  }
+
+  public deletarProduto(produto: Produto) {
+    var retorno = confirm("Deseja realmente deletar o produto?");
+    if (retorno) {
+      this.produtoServico.deletar(produto)
+        .subscribe(
+          produtos => {
+            this.produtos = produtos;
+          },
+          e => {
+            console.log(e.errors);
+          }
+        );
+    }
+  }
+
+  public editarProduto(produto: Produto) {
+    sessionStorage.setItem('produtoSession', JSON.stringify(produto));
     this.router.navigate(['/produto']);
   }
 
