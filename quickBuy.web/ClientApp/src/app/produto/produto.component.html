@@ -27,16 +27,21 @@
        class="form-control mb-3"
        [ngClass]="{
         'is-invalid': descricao.invalid && (descricao.dirty || descricao.touched),
-        'is-valid': descricao.valid
+        'is-valid': descricao.valid && (descricao.dirty || descricao.touched)
        }"
        [(ngModel)]="produto.descricao"
        #descricao="ngModel"
        required
+       minlength="50"
        />
 <div class="invalid-feedback mb-2" *ngIf="descricao.invalid && (descricao.dirty || descricao.touched)">
   <div *ngIf="descricao.errors.required">
     Descrição é de preenchimento obrigatório.
   </div>
+
+</div>
+<div class="invalid-feedback mb-2" *ngIf="descricao.invalid && descricao.errors.minlength">
+  Campo deve ter no mínimo 50 caracteres.
 </div>
 
 <label for="inputPreco" class="sr-only">Preço</label>
