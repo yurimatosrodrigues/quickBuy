@@ -5,17 +5,25 @@
         <thead>
           <tr>
             <th></th>
-            <th> Produto</th>
-            <th> Quantidade</th>
-            <th> Preço</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let p of produtos">
-            <td style="width:15%;"><img src="../../../../../arquivos/{{p.nomeArquivo}}" style="width:60%; height:15%;"/></td>
-            <td style="width:55%;">{{p.descricao}}</td>
-            <td style="width:10%;"></td>
-            <td>R$ {{p.preco}}</td>
+            <td style="width:15%;"><img src="../../../../../arquivos/{{p.nomeArquivo}}" style="width:65%; height:20%;"/></td>
+            <td style="width:50%;">{{p.descricao}}</td>
+            <td style="width:5%;">
+              <input type="number"
+                     class="form-control"
+                     value="1"
+                     (change)="atualizarPreco(p, $event.target.value)"
+                     [(ngModel)]="p.quantidade" placeholder="1"/>
+            </td>
+            <td style="width:20%;">R$ {{p.preco | number: '1.0-2'}}</td>
+            <td style="width:10%;"><button class="btn btn-secondary btn-sm" (click)="remover(p)">Remover</button></td>
           </tr>
         </tbody>
       </table>
@@ -28,12 +36,12 @@
           <div class="card-body">
             <table class="mb-3">
               <tr>
-                <td style="width:50%;"><strong>Total</strong>:</td>
-                <td style="width:50%;"><strong>R$: 1300</strong></td>
+                <td style="width:30%;"><strong>Total</strong>:</td>
+                <td style="width:70%;"><strong>R$: {{total | number: '1.0-2'}}</strong></td>
               </tr>
             </table>
             
-            <button class="btn btn-danger">Efetivar Compra</button>
+            <button class="btn btn-danger" style="width:100%;">Efetivar Compra</button>
           </div>
         </div>
       </div>      
