@@ -4,6 +4,7 @@ using quickBuy.dominio.Entidades;
 
 namespace quickBuy.web.Controllers
 {
+    [Route("api/[Controller]")]
     public class PedidoController : Controller
     {
         private readonly IPedidoRepositorio _pedidoRepositorio;
