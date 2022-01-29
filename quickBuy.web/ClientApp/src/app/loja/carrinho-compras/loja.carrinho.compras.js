@@ -9,7 +9,12 @@ define(["require", "exports"], function (require, exports) {
         LojaCarrinhoCompras.prototype.adicionar = function (produto) {
             var produtoLocalStorage = localStorage.getItem("produtoLocalStorage");
             this.produtos = JSON.parse(produtoLocalStorage);
-            if (!this.produtos.indexOf(produto)) {
+            if (this.produtos.length > 0) {
+                if (!this.produtos.find(function (p) { return p.id == produto.id; })) {
+                    this.produtos.push(produto);
+                }
+            }
+            else {
                 this.produtos.push(produto);
             }
             localStorage.setItem("produtoLocalStorage", JSON.stringify(this.produtos));
