@@ -33,15 +33,13 @@ export class LoginComponent implements OnInit{
                     
           this.usuarioServico.usuario = usuario_json;         
           
-
           if (this.returnUrl == null) {
             this.router.navigate(['/']);
           }
           else {
             this.router.navigate([this.returnUrl]);
           }
-          
-          
+                    
         },
         err => {
           console.log(err.error);

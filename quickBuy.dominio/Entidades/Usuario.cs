@@ -9,6 +9,7 @@ namespace quickBuy.dominio.Entidades
         public string Senha { get; set; }
         public string Nome { get; set; }
         public string SobreNome { get; set; }
+        public bool Administrador { get; set; }
 
         /*
          Um usuário pode ter nenhum ou muitos pedidos
