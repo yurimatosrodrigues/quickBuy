@@ -35,6 +35,7 @@ namespace quickBuy.web
 
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory

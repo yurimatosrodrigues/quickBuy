@@ -1,6 +1,6 @@
 import { Produto } from "../../modelo/produto";
 
-export class LojaCarrinhoCompras {
+export class LojaCarrinhoCompras {  
   public produtos: Produto[] = [];
 
   public adicionar(produto: Produto) {
@@ -23,7 +23,7 @@ export class LojaCarrinhoCompras {
     var produtoLocalStorage = localStorage.getItem("produtoLocalStorage");
     if (produtoLocalStorage)
       return JSON.parse(produtoLocalStorage);
-
+    return this.produtos;
   }
 
   public removerProduto(produto: Produto) {
@@ -37,5 +37,9 @@ export class LojaCarrinhoCompras {
 
   public atualizar(produtos: Produto[]) {
     localStorage.setItem("produtoLocalStorage", JSON.stringify(produtos));
+  }
+
+  public limparCarrinhoCompras() {
+    localStorage.setItem("produtoLocalStorage", "");
   }
 }

@@ -38,11 +38,17 @@
                aria-expanded="false" id="linkMenu" data-toggle="dropdown">
               {{usuario.email}}
             </a>
-              <ul class="dropdown-menu" aria-labelledby="linkMenu">
-                <li class="dropdown-item" role="menu" [routerLink]="['/sair']" (click)="sair()">
-                  Sair
-                </li>
-              </ul>
+            <ul class="dropdown-menu" aria-labelledby="linkMenu">
+              <li class="dropdown-item" role="menu" [routerLink]="['/sair']" (click)="sair()">
+                Sair
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/loja-efetivar']">
+              <img src="assets/carrinho.png" style="width:32px; height:32px;"/>
+            </a>
           </li>
 
         </ul>
