@@ -8,8 +8,8 @@ define(["require", "exports"], function (require, exports) {
         }
         LojaCarrinhoCompras.prototype.adicionar = function (produto) {
             var produtoLocalStorage = localStorage.getItem("produtoLocalStorage");
-            this.produtos = JSON.parse(produtoLocalStorage);
-            if (this.produtos.length > 0) {
+            if (produtoLocalStorage) {
+                this.produtos = JSON.parse(produtoLocalStorage);
                 if (!this.produtos.find(function (p) { return p.id == produto.id; })) {
                     this.produtos.push(produto);
                 }

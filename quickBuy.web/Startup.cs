@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using quickBuy.dominio.Contratos;
 using quickBuy.repositorio.Contexto;
 using quickBuy.repositorio.Repositorios;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 
 namespace quickBuy.web
 {
@@ -24,7 +25,7 @@ namespace quickBuy.web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {            
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             var connectionString = Configuration.GetConnectionString("QuickBuyDB");
@@ -38,6 +39,9 @@ namespace quickBuy.web
             services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
 
             services.AddControllersWithViews();
+            services.AddControllers().AddNewtonsoftJson(x =>
+                x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

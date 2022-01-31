@@ -5,17 +5,16 @@ export class LojaCarrinhoCompras {
 
   public adicionar(produto: Produto) {
     var produtoLocalStorage = localStorage.getItem("produtoLocalStorage");
-
-    this.produtos = JSON.parse(produtoLocalStorage);
     
-    if (this.produtos.length > 0) {      
+    if (produtoLocalStorage) {
+      this.produtos = JSON.parse(produtoLocalStorage);
       if (!this.produtos.find(p => p.id == produto.id)) {
         this.produtos.push(produto);
-      }      
+      }
     }
-    else {      
-      this.produtos.push(produto);      
-    }    
+    else {
+      this.produtos.push(produto);
+    }
     localStorage.setItem("produtoLocalStorage", JSON.stringify(this.produtos));    
   }
 
