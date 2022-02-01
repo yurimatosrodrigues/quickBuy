@@ -103,22 +103,22 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.22, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.22, )"
             },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.22, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.22, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -128,7 +128,7 @@
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.2, )"
             }
           },
           "imports": [

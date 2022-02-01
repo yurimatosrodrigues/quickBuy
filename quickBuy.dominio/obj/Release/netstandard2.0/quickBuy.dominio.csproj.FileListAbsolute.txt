@@ -1,0 +1,9 @@
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\bin\Release\netstandard2.0\quickBuy.dominio.deps.json
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\bin\Release\netstandard2.0\quickBuy.dominio.dll
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\bin\Release\netstandard2.0\quickBuy.dominio.pdb
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\obj\Release\netstandard2.0\quickBuy.dominio.csproj.AssemblyReference.cache
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\obj\Release\netstandard2.0\quickBuy.dominio.AssemblyInfoInputs.cache
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\obj\Release\netstandard2.0\quickBuy.dominio.AssemblyInfo.cs
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\obj\Release\netstandard2.0\quickBuy.dominio.csproj.CoreCompileInputs.cache
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\obj\Release\netstandard2.0\quickBuy.dominio.dll
+C:\repos\quickbuy\quickBuy\quickBuy.dominio\obj\Release\netstandard2.0\quickBuy.dominio.pdb

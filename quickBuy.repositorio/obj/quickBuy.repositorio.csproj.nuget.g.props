@@ -16,6 +16,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Phibra\.nuget\packages\microsoft.entityframeworkcore.tools\3.1.10</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Phibra\.nuget\packages\microsoft.entityframeworkcore.tools\3.1.22</PkgMicrosoft_EntityFrameworkCore_Tools>
   </PropertyGroup>
 </Project>
