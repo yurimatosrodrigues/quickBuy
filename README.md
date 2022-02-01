@@ -1,8 +1,10 @@
 <h1> QuickBuy </h1>
 
+![image](https://user-images.githubusercontent.com/44244932/151915333-55e82414-06f9-44ad-ad2e-5cfa9065682f.png)
+
 <h2>
 Status:<br/> 
-  Versão do curso concluída! ✔️ <br/> 
+  Concluída! ✔️ <br/> 
   Seguirei implementando melhorias que julgo necessárias. 🚧
 </h2> 
 
